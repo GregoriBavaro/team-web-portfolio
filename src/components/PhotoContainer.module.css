@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35rem;
+  height: 90%;
+  overflow: hidden;
+}
+
+.container div:nth-child(1) {
+  height: 35rem;
+  width: 80%;
+  overflow: hidden;
+  border-radius: 14rem;
+  display: flex;
+}
+
+
+img {
+  max-width: 100%;
+  margin-top: auto;
+  margin-bottom: -0.5rem;
+}

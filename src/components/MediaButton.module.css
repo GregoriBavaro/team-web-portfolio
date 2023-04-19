@@ -1,0 +1,19 @@
+.left {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+
+.right {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}

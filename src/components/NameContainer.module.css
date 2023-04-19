@@ -1,0 +1,17 @@
+.container {
+  position: absolute;
+  right: -3.6rem;
+  bottom: 0;
+  overflow: hidden;
+  min-width: 35rem;
+  text-align: right;
+  height: 11.5rem;
+}
+
+.container h1 {
+  font-family: "evermoreregular";
+  font-size: var(--fs-xl);
+  letter-spacing: 0.3rem;
+  color: rgba(215, 189, 184, 0.703);
+  line-height: 1.4em;
+}

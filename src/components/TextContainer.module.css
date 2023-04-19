@@ -1,0 +1,90 @@
+.container {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  max-width: 50rem;
+  height: 40rem;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.container div:nth-child(1) span:nth-child(1) {
+  font-size: var(--fs-l);
+  font-weight: 800;
+}
+
+.container div:nth-child(2) {
+  height: 12rem;
+}
+
+.container p {
+  font-weight: 200;
+}
+
+.container div:nth-child(1) span:nth-child(3) {
+  font-size: var(--fs-600);
+  font-weight: 800;
+  margin-top: -2rem;
+}
+
+.container div:nth-child(2) {
+  text-align: left;
+}
+
+.container div:nth-child(3) {
+  text-align: center;
+  height: 50px;
+  font: normal normal 600 1.4em/2.3em "Oswald", sans-serif;
+  overflow: hidden;
+  max-width: fit-content;
+  border-radius: 0.2rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  padding: 0 2rem;
+  cursor: pointer;
+  background-color: var(--orange);
+}
+
+.container div:nth-child(3) span {
+  text-align: center;
+  display: block;
+}
+
+.container div:nth-child(3) span {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 0em;
+  text-transform: uppercase;
+}
+
+.container div:nth-child(3):hover {
+  outline: none;
+}
+
+.container div:nth-child(3):hover span:nth-child(1) {
+  margin-top: -2.3em;
+}
+
+.container div:nth-child(3) span:nth-child(1) {
+  color: var(--black);
+}
+
+.container div:nth-child(3) span:nth-child(2) {
+  color: var(--lightBeige);
+  font-weight: 600;
+}
+
