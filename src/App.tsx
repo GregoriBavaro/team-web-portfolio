@@ -7,9 +7,10 @@ import {
 import GlobalContextProvider from "./store/global-context";
 
 //Pages
-import Home from "./pages/Home";
+import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import HomePage from "./pages/Home"
 import RootLayout from "./pages/Root";
 
 const router = createBrowserRouter([
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/", element: <HomePage /> },
+      { path: "/about", element: <About /> },
       { path: "/projects", element: <Projects /> },
       { path: "/contact", element: <Contact /> },
       { path: "*", element: <Navigate to="/" /> },

@@ -1,18 +1,15 @@
+//Css
+import classes from "../components/Home.module.css";
 
 //Components
-import PhotoContainer from "../components/PhotoContainer";
-import NameContainer from "../components/NameContainer";
-import TextContainer from "../components/TextContainer";
-
-//CSS
-import classes from "../components/Home.module.css";
+import HeroThreeDModule from "../components/HeroThreeDModule";
+import HeroText from "../components/HeroText";
 
 const Home = () => {
   return (
     <main className={classes.container}>
-      <PhotoContainer />
-      <NameContainer />
-      <TextContainer />
+      {/* <HeroThreeDModule /> */}
+      <HeroText />
     </main>
   );
 };

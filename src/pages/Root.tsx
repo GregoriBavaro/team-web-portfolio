@@ -21,8 +21,9 @@ const RootLayout: React.FC = () => {
 
   const menu = [
     new MenuItem("Home", 1, "/"),
-    new MenuItem("Projects", 2, "/projects"),
-    new MenuItem("Contact", 3, "/contact"),
+    new MenuItem("About", 2, "/about"),
+    new MenuItem("Projects", 3, "/projects"),
+    new MenuItem("Contact", 4, "/contact"),
   ];
 
   const transitions = useTransition(personCtx.id, {

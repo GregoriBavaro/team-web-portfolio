@@ -1,5 +1,5 @@
 //Hooks
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import {
   useSpringRef,
   useTransition,
@@ -7,7 +7,8 @@ import {
   useSpring,
 } from "@react-spring/web";
 import { GlobalContext } from "../store/global-context";
-import SetPerson from "../hooks/set-person"
+import SetPerson from "../hooks/set-person";
+import Controls from "../hooks/set-controls";
 
 //CSS
 import classes from "../components/PhotoContainer.module.css";
@@ -24,13 +25,20 @@ import leftArrow from "../data/ui/left-arrow.png";
 import rightArrow from "../data/ui/right-arrow.png";
 
 const PhotoContainer: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [animation, setAnimation] = useState<{ from: string; leave: string }>({
-    from: "-100%",
-    leave: "100%",
-  });
   const transRef = useSpringRef();
   const personCtx = useContext(GlobalContext);
+
+  const {
+    animation: animation,
+    index: currentIndex,
+    forward: rightArrowButtonHandler,
+    backward: leftArrowButtonHandler,
+  } = Controls(
+    3,
+    2,
+    { from: "-100%", leave: "100%" },
+    { from: "100%", leave: "-100%" }
+  );
 
   const transitions = useTransition(currentIndex, {
     ref: transRef,
@@ -44,7 +52,7 @@ const PhotoContainer: React.FC = () => {
       duration: 300,
       tension: 180,
       friction: 12,
-      mass: 1
+      mass: 1,
     },
   });
 
@@ -54,30 +62,6 @@ const PhotoContainer: React.FC = () => {
     delay: 700,
   });
 
-  const rightArrowButtonHandler = () => {
-    if (currentIndex < 3) {
-      setCurrentIndex((prev: number) => {
-        return prev + 1;
-      });
-    }
-    if (currentIndex === 2) {
-      setCurrentIndex(0);
-    }
-    setAnimation((prev) => ({ ...prev, from: "-100%", leave: "100%" }));
-  };
-
-  const leftArrowButtonHandler = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prev: number) => {
-        return prev - 1;
-      });
-    }
-    if (currentIndex === 0) {
-      setCurrentIndex(2);
-    }
-    setAnimation((prev) => ({ ...prev, from: "100%", leave: "-100%" }));
-  };
-
   useEffect(() => {
     transRef.start();
     document.body.style.background = personCtx.homePageBackground;
@@ -86,7 +70,7 @@ const PhotoContainer: React.FC = () => {
   SetPerson({
     index: currentIndex,
     animate: animation,
-  })
+  });
 
   const menu = [
     new MediaButtonModel(leftArrow, 1, "left", leftArrowButtonHandler),

@@ -19,6 +19,12 @@
   max-height: 100%;
   cursor: pointer;
   margin: auto;
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+.skills div:nth-child(1) img:hover {
+  transform: rotate(360deg);
 }
 
 .skills__container {

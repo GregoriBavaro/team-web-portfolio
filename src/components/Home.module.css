@@ -1,7 +1,10 @@
 .container {
-  height: 90vh;
-  height: 90svh;
-  position: relative;
-}
+    height: 90vh;
+    height: 90svh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
 
-
+  }

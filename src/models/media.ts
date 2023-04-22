@@ -2,13 +2,13 @@ class MediaButtonModel {
   icon: any;
   id: number;
   className: string;
-  onClick: () => void;
+  onClick: any;
 
   constructor(
     iconElement: any,
     idNumber: number,
     className: string,
-    onClick: () => void
+    onClick: any
   ) {
     this.icon = iconElement;
     this.id = idNumber;

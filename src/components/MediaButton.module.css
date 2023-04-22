@@ -14,6 +14,34 @@
   cursor: pointer;
 }
 
+.up {
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 10%;
+  cursor: pointer;
+}
+
+.down {
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: 10%;
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
+}
+
+.right img,
+.left img, .up img, .down img {
+  transition: all 0.5s;
+}
+
+.right img:hover,
+.left img:hover, .up img:hover, .down img:hover {
+  scale: 1.2;
 }

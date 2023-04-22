@@ -1,5 +1,12 @@
+//Components
+import LayoutWrapper from "../UI/LayoutWrapper";
+
 const Contact = () => {
-    return <h1>Contact</h1>
-}
+  return (
+    <LayoutWrapper>
+      <h1>Contact</h1>
+    </LayoutWrapper>
+  );
+};
 
 export default Contact;

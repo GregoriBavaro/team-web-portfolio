@@ -3,9 +3,6 @@ import React, { useState } from "react";
 
 import Person from "../models/person";
 
-interface ChildrenProps {
-  children?: React.ReactNode;
-}
 
 const gregAbout =
   "Hi, my name is Gregori. I am a Creative and skillful frontend web developer with a passion for design and creating elegant solutions. I care deeply about user experience with a serious passion for UI design and new technologies.I love to create beautiful and performant products with delightful user experiences.";
@@ -26,7 +23,7 @@ export const GlobalContext = React.createContext<Person>({
   skills: [{ language: "", experience: "" }],
 });
 
-const GlobalContextProvider: React.FC<ChildrenProps> = ({ children }) => {
+const GlobalContextProvider: React.FC<{children?: React.ReactNode}> = ({ children }) => {
   const gregori = new Person(
     "Gregori",
     "Bavaro",

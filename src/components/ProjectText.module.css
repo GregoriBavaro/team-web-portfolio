@@ -1,0 +1,78 @@
+.container {
+  flex: 1 1 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__wrapper {
+  overflow: hidden;
+}
+
+.container__wrapper div:nth-child(1) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  min-height: 25rem;
+}
+
+.container__wrapper span {
+  font-size: var(--fs-600);
+}
+
+.container__wrapper h1 {
+  font-size: var(--fs-600);
+}
+
+.container__wrapper p {
+  font-weight: 200;
+}
+
+
+.container__button {
+  text-align: center;
+  height: 50px;
+  font: normal normal 600 1.4em/2.3em "Oswald", sans-serif;
+  overflow: hidden;
+  max-width: fit-content;
+  border-radius: 0.2rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  padding: 0 2rem;
+  cursor: pointer;
+  background-color: var(--orange);
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+.container__button a {
+  text-align: center;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.container__button a {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 0em;
+}
+
+.container__button:hover {
+  outline: none;
+}
+
+.container__button:hover a:nth-child(1) {
+  margin-top: -2.2em;
+}
+
+.container__button a:nth-child(2) {
+  color: var(--black);
+}
+

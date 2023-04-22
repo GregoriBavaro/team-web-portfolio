@@ -1,6 +1,6 @@
 //Hooks
 import { useEffect } from "react";
-import { useSpringRef, useTransition, animated, useSpring } from "@react-spring/web";
+import { useSpringRef, useTransition, animated } from "@react-spring/web";
 
 const Slide: React.FC<{
   isClicked: boolean;

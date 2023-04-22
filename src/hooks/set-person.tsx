@@ -20,90 +20,84 @@ const SetPerson: React.FC<{
 }> = (props): any => {
   const personCtx = useContext(GlobalContext);
 
+  const greg = new Person(
+    "Gregori",
+    "Bavaro",
+    "Web Developer",
+    gregAbout,
+    0,
+    "",
+    props.animate,
+    "linear-gradient(179deg, #ffb340 0%, #ef6f3e 90%)",
+    "linear-gradient(180deg,#4a4a4a 0%, #050012 80%)",
+    "var(--orange)",
+    "var(--black)",
+    "var(--lightBeige)",
+    [
+      { language: "HTML", experience: "70%" },
+      { language: "CSS", experience: "80%" },
+      { language: "JavaScript", experience: "60%" },
+      { language: "React.js", experience: "55%" },
+      { language: "TypeScript", experience: "30%" },
+      { language: "C#", experience: "30%" },
+      { language: "SQL", experience: "20%" },
+      { language: "Spline", experience: "40%" },
+    ]
+  );
+
+  const darkoD = new Person(
+    "Darko",
+    "Dejanoski",
+    "Software Developer",
+    dareDAbout,
+    1,
+    "",
+    props.animate,
+    "linear-gradient(180deg,#d95063 0%, #d80025 90%)",
+    "linear-gradient(180deg,#6c052e 0%, #de2c54 80%)",
+    "var(--black)",
+    "var(--lightBeige)",
+    "var(--cherry)",
+    [
+      { language: "HTML", experience: "70%" },
+      { language: "CSS", experience: "20%" },
+      { language: "JavaScript", experience: "50%" },
+      { language: "Angular", experience: "45%" },
+      { language: "C#", experience: "60%" },
+      { language: "SQL", experience: "50%" },
+      { language: ".Net", experience: "70%" },
+    ]
+  );
+
+  const darkoN = new Person(
+    "Darko",
+    "Nikolikj",
+    ".Net Developer",
+    dareNAbout,
+    2,
+    "",
+    props.animate,
+    "linear-gradient(180deg,#707b7c 0%, #455052 80%)",
+    "linear-gradient(180deg,#444e50 0%, #5f6e70 80%)",
+    "var(--lightBeige)",
+    "var(--black)",
+    "var(--tile)",
+    [
+      { language: "HTML", experience: "40%" },
+      { language: "CSS", experience: "50%" },
+      { language: "JavaScript", experience: "80%" },
+      { language: "Angular", experience: "45%" },
+      { language: "React.js", experience: "45%" },
+      { language: "C#", experience: "60%" },
+      { language: "SQL", experience: "50%" },
+      { language: ".Net", experience: "65%" },
+    ]
+  );
+
+  const arrayOfDevelopers = [greg, darkoD, darkoN];
+
   useEffect(() => {
-    if (props.index === 0) {
-      personCtx.set(
-        new Person(
-          "Gregori",
-          "Bavaro",
-          "Web Developer",
-          gregAbout,
-          0,
-          "",
-          props.animate,
-          "linear-gradient(179deg, #ffb340 0%, #ef6f3e 90%)",
-          "linear-gradient(180deg,#4a4a4a 0%, #050012 80%)",
-          "var(--orange)",
-          "var(--black)",
-          "var(--lightBeige)",
-          [
-            { language: "HTML", experience: "70%" },
-            { language: "CSS", experience: "80%" },
-            { language: "JavaScript", experience: "60%" },
-            { language: "React.js", experience: "55%" },
-            { language: "TypeScript", experience: "30%" },
-            { language: "C#", experience: "30%" },
-            { language: "SQL", experience: "20%" },
-            { language: "Spline", experience: "40%" },
-          ]
-        )
-      );
-    }
-    if (props.index === 1) {
-      personCtx.set(
-        new Person(
-          "Darko",
-          "Dejanoski",
-          "Software Developer",
-          dareDAbout,
-          1,
-          "",
-          props.animate,
-          "linear-gradient(180deg,#d95063 0%, #d80025 90%)",
-          "linear-gradient(180deg,#6c052e 0%, #de2c54 80%)",
-          "var(--black)",
-          "var(--lightBeige)",
-          "var(--cherry)",
-          [
-            { language: "HTML", experience: "70%" },
-            { language: "CSS", experience: "20%" },
-            { language: "JavaScript", experience: "50%" },
-            { language: "Angular", experience: "45%" },
-            { language: "C#", experience: "60%" },
-            { language: "SQL", experience: "50%" },
-            {language: ".Net", experience: "70%"}
-          ]
-        )
-      );
-    }
-    if (props.index === 2) {
-      personCtx.set(
-        new Person(
-          "Darko",
-          "Nikolikj",
-          ".Net Developer",
-          dareNAbout,
-          2,
-          "",
-          props.animate,
-          "linear-gradient(180deg,#707b7c 0%, #455052 80%)",
-          "linear-gradient(180deg,#444e50 0%, #5f6e70 80%)",
-          "var(--lightBeige)",
-          "var(--black)",
-          "var(--tile)",
-          [
-            { language: "HTML", experience: "40%" },
-            { language: "CSS", experience: "50%" },
-            { language: "JavaScript", experience: "80%" },
-            { language: "Angular", experience: "45%" },
-            { language: "React.js", experience: "45%" },
-            { language: "C#", experience: "60%" },
-            { language: "SQL", experience: "50%" },
-            {language: ".Net", experience: "65%"}
-          ]
-        )
-      );
-    }
+    personCtx.set(arrayOfDevelopers[props.index]);
   }, [props.index]);
 };
 

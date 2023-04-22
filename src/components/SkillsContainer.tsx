@@ -17,7 +17,7 @@ const SKillsContainer: React.FC<{
   const personCtx = useContext(GlobalContext);
 
   const [springs, api] = useSpring(() => ({
-    from: { x: "300%" },
+    from: { x: "-300%" },
   }));
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const SKillsContainer: React.FC<{
         x: "0%",
       },
       config: {
-        duration: 1800
-      }
+        duration: 1800,
+      },
     });
   }, [props.isClicked, personCtx.id]);
 
@@ -42,7 +42,11 @@ const SKillsContainer: React.FC<{
       leave={"100%"}
     >
       <div>
-        <img src={arrowDown} onClick={props.skillsHandler} />
+        <img
+          src={arrowDown}
+          onClick={props.skillsHandler}
+          style={{ transform: !props.isClicked ? "rotate(360deg)" : "" }}
+        />
       </div>
       <section className={classes.skills__container}>
         {personCtx.skills.map(({ language, experience }, i) => {
@@ -54,7 +58,7 @@ const SKillsContainer: React.FC<{
                   style={{
                     background: personCtx.photoContainerBackground,
                     width: experience,
-                    ...springs
+                    ...springs,
                   }}
                 ></animated.span>
               </span>
