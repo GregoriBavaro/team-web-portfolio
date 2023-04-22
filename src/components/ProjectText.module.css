@@ -34,18 +34,19 @@
 
 .container__button {
   text-align: center;
-  height: 50px;
-  font: normal normal 600 1.4em/2.3em "Oswald", sans-serif;
+  height: 45px;
+  font: normal normal 600 1.2em/2.4em "Oswald", sans-serif;
   overflow: hidden;
   max-width: fit-content;
   border-radius: 0.2rem;
   border: none;
   transition: all 0.3s ease-in-out;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   cursor: pointer;
   background-color: var(--orange);
   text-transform: uppercase;
   margin-top: auto;
+  color: var(--black);
 }
 
 .container__button a {
@@ -69,10 +70,11 @@
 }
 
 .container__button:hover a:nth-child(1) {
-  margin-top: -2.2em;
+  margin-top: -2.4em;
+  
 }
 
 .container__button a:nth-child(2) {
-  color: var(--black);
+  color: var(--lightBeige);
 }
 

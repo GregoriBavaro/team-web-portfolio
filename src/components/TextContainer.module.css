@@ -44,16 +44,19 @@
 
 .container div:nth-child(3) {
   text-align: center;
-  height: 50px;
-  font: normal normal 600 1.4em/2.3em "Oswald", sans-serif;
+  height: 45px;
+  font: normal normal 600 1.2em/2.4em "Oswald", sans-serif;
   overflow: hidden;
   max-width: fit-content;
   border-radius: 0.2rem;
   border: none;
   transition: all 0.3s ease-in-out;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   cursor: pointer;
   background-color: var(--orange);
+  text-transform: uppercase;
+  margin-top: auto;
+  color: var(--black);
 }
 
 .container div:nth-child(3) span {
@@ -76,7 +79,7 @@
 }
 
 .container div:nth-child(3):hover span:nth-child(1) {
-  margin-top: -2.3em;
+  margin-top: -2.4em;
 }
 
 .container div:nth-child(3) span:nth-child(1) {
