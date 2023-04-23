@@ -66,4 +66,21 @@ body {
   --fs-400: clamp(0.3rem, 6vw + 1rem, 1.2rem);
 }
 
+/* Scroll bar */
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightBeige);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
 

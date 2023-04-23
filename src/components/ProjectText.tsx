@@ -6,6 +6,7 @@ import setProject from "../hooks/set-project";
 
 //Components
 import MediaButton from "./MediaButton";
+import ProjectPhotoContainer from "../components/ProjectPhotoContainer";
 
 //CSS
 import classes from "./ProjectText.module.css";
@@ -44,7 +45,7 @@ const ProjectText: React.FC = () => {
     id: project.id,
     description: project.description,
     buttonName: project.buttonName,
-    buttonLink: project.buttonLink
+    buttonLink: project.buttonLink,
   });
 
   useEffect(() => {
@@ -54,7 +55,7 @@ const ProjectText: React.FC = () => {
         id: project.id,
         description: project.description,
         buttonName: project.buttonName,
-        buttonLink: project.buttonLink
+        buttonLink: project.buttonLink,
       });
     }, 470);
 
@@ -89,37 +90,36 @@ const ProjectText: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className={classes.container}>
-      <div className={classes.container__wrapper}>
-        {transitions((style, item): any =>
-          item > -1 ? (
-            <animated.div style={style}>
-              <span>{info.id}</span>
-              <h1>{info.name}</h1>
-              <p>{info.description}</p>
-              <div className={classes.container__button}>
-                <a href={info.buttonLink}>
-                  {info.buttonName}
-                </a>
-                <a href={info.buttonLink}>
-                  {info.buttonName}
-                </a>
-              </div>
-            </animated.div>
-          ) : (
-            ""
-          )
-        )}
+    <>
+      <div className={classes.container}>
+        <div className={classes.container__wrapper}>
+          {transitions((style, item): any =>
+            item > -1 ? (
+              <animated.div style={style}>
+                <span>{info.id}</span>
+                <h1>{info.name}</h1>
+                <p>{info.description}</p>
+                <div className={classes.container__button}>
+                  <a href={info.buttonLink}>{info.buttonName}</a>
+                  <a href={info.buttonLink}>{info.buttonName}</a>
+                </div>
+              </animated.div>
+            ) : (
+              ""
+            )
+          )}
+        </div>
+        {menu.map((item) => (
+          <MediaButton
+            key={item.id}
+            icon={item.icon}
+            position={item.className}
+            onClick={item.onClick}
+          />
+        ))}
       </div>
-      {menu.map((item) => (
-        <MediaButton
-          key={item.id}
-          icon={item.icon}
-          position={item.className}
-          onClick={item.onClick}
-        />
-      ))}
-    </div>
+      <ProjectPhotoContainer project={project}/>
+    </>
   );
 };
 
