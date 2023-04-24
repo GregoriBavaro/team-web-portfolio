@@ -2,8 +2,6 @@
 import { CSSProperties } from "react";
 import { animated, AnimatedProps } from "@react-spring/web";
 
-
-
 const pages: ((
   props: AnimatedProps<{ style: CSSProperties }>
 ) => React.ReactElement)[] = [

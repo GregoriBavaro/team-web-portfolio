@@ -18,6 +18,9 @@ import MediaButtonModel from "../models/media";
 import upArrow from "../data/ui/left-arrow.png";
 import downArrow from "../data/ui/right-arrow.png";
 
+//Models
+import Project from "../models/project";
+
 const ProjectText: React.FC = () => {
   const transRef = useSpringRef();
   const {
@@ -34,29 +37,11 @@ const ProjectText: React.FC = () => {
 
   const project = setProject(currentIndex);
 
-  const [info, setInfo] = useState<{
-    name: string;
-    id: number;
-    description: string;
-    buttonName: string;
-    buttonLink: string;
-  }>({
-    name: project.name,
-    id: project.id,
-    description: project.description,
-    buttonName: project.buttonName,
-    buttonLink: project.buttonLink,
-  });
+  const [info, setInfo] = useState<Project>(project);
 
   useEffect(() => {
     const info = setTimeout(() => {
-      setInfo({
-        name: project.name,
-        id: project.id,
-        description: project.description,
-        buttonName: project.buttonName,
-        buttonLink: project.buttonLink,
-      });
+      setInfo(project);
     }, 470);
 
     return () => {
@@ -118,7 +103,7 @@ const ProjectText: React.FC = () => {
           />
         ))}
       </div>
-      <ProjectPhotoContainer project={project}/>
+      <ProjectPhotoContainer project={project} />
     </>
   );
 };
