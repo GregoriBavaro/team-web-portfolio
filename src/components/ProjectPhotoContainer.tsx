@@ -3,13 +3,18 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { animated, useTransition, useSpringRef } from "@react-spring/web";
 import { useEffect, useState } from "react";
 
+//Components
+import Scroll from "../UI/Scroll";
+
 //CSS
 import classes from "./ProjectPhotoContainer.module.css";
 
 //Models
 import Project from "../models/project";
 
-const ProjectPhotoContainer: React.FC<{ project: Project }> = (props) => {
+const ProjectPhotoContainer: React.FC<{
+  project: Project;
+}> = (props) => {
   const currentProject = props.project;
   const transRef = useSpringRef();
   const [info, setInfo] = useState<Project>(currentProject);
@@ -17,7 +22,7 @@ const ProjectPhotoContainer: React.FC<{ project: Project }> = (props) => {
   useEffect(() => {
     const info = setTimeout(() => {
       setInfo(currentProject);
-    }, 470);
+    }, 550);
 
     return () => {
       clearTimeout(info);
@@ -76,6 +81,8 @@ const ProjectPhotoContainer: React.FC<{ project: Project }> = (props) => {
           )
         )}
       </div>
+      <Scroll class={"right"} />
+      <Scroll class={"left"} />
     </div>
   );
 };

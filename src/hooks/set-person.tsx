@@ -5,6 +5,11 @@ import { GlobalContext } from "../store/global-context";
 //Models
 import Person from "../models/person";
 
+//Photos
+import gregori from "../data/photos/gregori.png";
+import darko from "../data/photos/person.png";
+import darko2 from "../data/photos/person2.png";
+
 const gregAbout =
   "Hi, my name is Gregori. I am a Creative and skillful frontend web developer with a passion for design and creating elegant solutions. I care deeply about user experience with a serious passion for UI design and new technologies.I love to create beautiful and performant products with delightful user experiences.";
 
@@ -42,7 +47,8 @@ const SetPerson: React.FC<{
       { language: "C#", experience: "30%" },
       { language: "SQL", experience: "20%" },
       { language: "Spline", experience: "40%" },
-    ]
+    ],
+    gregori
   );
 
   const darkoD = new Person(
@@ -66,7 +72,8 @@ const SetPerson: React.FC<{
       { language: "C#", experience: "60%" },
       { language: "SQL", experience: "50%" },
       { language: ".Net", experience: "70%" },
-    ]
+    ],
+    darko
   );
 
   const darkoN = new Person(
@@ -91,7 +98,8 @@ const SetPerson: React.FC<{
       { language: "C#", experience: "60%" },
       { language: "SQL", experience: "50%" },
       { language: ".Net", experience: "65%" },
-    ]
+    ],
+    darko2
   );
 
   const arrayOfDevelopers = [greg, darkoD, darkoN];

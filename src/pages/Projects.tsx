@@ -5,7 +5,7 @@ import LayoutWrapper from "../UI/LayoutWrapper";
 const Projects = () => {
   return (
     <LayoutWrapper>
-      <ProjectText/>
+      <ProjectText />
     </LayoutWrapper>
   );
 };

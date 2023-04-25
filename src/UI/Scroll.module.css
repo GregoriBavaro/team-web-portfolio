@@ -1,0 +1,39 @@
+.right span {
+  position: absolute;
+  right: 0%;
+  transform: rotateZ(90deg);
+  transform-origin: 54% 150%;
+  animation: MoveUpDown 1.2s ease-in-out infinite;
+}
+
+.left span {
+  position: absolute;
+  left: 0%;
+  transform: rotateZ(270deg);
+  transform-origin: 46% 150%;
+  animation: MoveUpDown 1.2s ease-in-out infinite;
+}
+
+.left img {
+  position: absolute;
+  bottom: 2%;
+  left: 0.5rem;
+  width: 1rem;
+}
+
+.right img {
+  position: absolute;
+  bottom: 2%;
+  right: 0.5rem;
+  width: 1rem;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 5.5rem;
+  }
+  50% {
+    bottom: 8rem;
+  }
+}

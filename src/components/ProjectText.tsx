@@ -103,7 +103,7 @@ const ProjectText: React.FC = () => {
           />
         ))}
       </div>
-      <ProjectPhotoContainer project={project} />
+      <ProjectPhotoContainer project={project}/>
     </>
   );
 };

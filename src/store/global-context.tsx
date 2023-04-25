@@ -1,8 +1,11 @@
 //Hooks
 import React, { useState } from "react";
 
+//Model
 import Person from "../models/person";
-import Project from "../models/project";
+
+//Photos
+import greg from "../data/photos/gregori.png";
 
 const gregAbout =
   "Hi, my name is Gregori. I am a Creative and skillful frontend web developer with a passion for design and creating elegant solutions. I care deeply about user experience with a serious passion for UI design and new technologies.I love to create beautiful and performant products with delightful user experiences.";
@@ -21,6 +24,7 @@ export const GlobalContext = React.createContext<Person>({
   buttonTextColor: "",
   buttonTextColorHover: "",
   skills: [{ language: "", experience: "" }],
+  photo: ""
 });
 
 
@@ -49,7 +53,8 @@ const GlobalContextProvider: React.FC<{ children?: React.ReactNode }> = ({
       { language: "C#", experience: "30%" },
       { language: "SQL", experience: "20%" },
       { language: "Spline", experience: "40%" },
-    ]
+    ],
+    greg
   );
 
   const [person, setPerson] = useState<Person>(gregori);
@@ -68,6 +73,7 @@ const GlobalContextProvider: React.FC<{ children?: React.ReactNode }> = ({
     buttonTextColor: person.buttonTextColor,
     buttonTextColorHover: person.buttonTextColorHover,
     skills: person.skills,
+    photo: person.photo,
   };
 
   return (

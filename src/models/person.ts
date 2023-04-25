@@ -12,6 +12,7 @@ class Person {
   buttonTextColor: string;
   buttonTextColorHover: string;
   skills: {language: string, experience: string}[];
+  photo: string;
 
   constructor(
     setName: string,
@@ -27,6 +28,7 @@ class Person {
     setButtonTextColor: string,
     setButtonTextColorHover: string,
     setSkills: {language: string, experience: string}[],
+    setPhoto: string
   ) {
     this.name = setName;
     this.sirName = setSirName;
@@ -41,6 +43,7 @@ class Person {
     this.buttonTextColor = setButtonTextColor
     this.buttonTextColorHover = setButtonTextColorHover;
     this.skills = setSkills;
+    this.photo = setPhoto;
   }
 }
 

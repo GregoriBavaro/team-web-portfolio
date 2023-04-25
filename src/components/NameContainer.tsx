@@ -1,13 +1,10 @@
 //Hooks
 import { useContext, useEffect } from "react";
 import { GlobalContext } from "../store/global-context";
-import {
-  useSpringRef,
-  useTransition,
-} from "@react-spring/web";
+import { useSpringRef, useTransition, animated } from "@react-spring/web";
 
 //Components
-import pages from "./NamePages"
+import pages from "./NamePages";
 
 //CSS
 import classes from "./NameContainer.module.css";
@@ -19,14 +16,15 @@ const NameContainer: React.FC = () => {
   const transitions = useTransition(personCtx.id, {
     ref: transRef,
     keys: null,
-    delay:  250,
+    delay: 250,
     from: { x: personCtx.animation.from, opacity: 1 },
     enter: { x: "0%", opacity: 1 },
     leave: { x: personCtx.animation.leave, opacity: 1 },
     exitBeforeEnter: true,
     config: {
       duration: 300,
-      tension: 180, friction: 12 
+      tension: 180,
+      friction: 12,
     },
   });
 

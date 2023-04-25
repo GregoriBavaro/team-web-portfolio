@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   scroll-behavior: smooth;
+  padding:0 2rem;
 }
 
 .wrapper {
@@ -13,8 +14,11 @@
   height: 100%;
   position: relative;
   scroll-behavior: smooth;
+  
 }
 
 .wrapper img {
   position: absolute;
 }
+
+
