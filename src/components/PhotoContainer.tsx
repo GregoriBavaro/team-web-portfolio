@@ -61,6 +61,7 @@ const PhotoContainer: React.FC = () => {
     to: { background: personCtx.photoContainerBackground },
     delay: 700,
   });
+  
 
   useEffect(() => {
     transRef.start();

@@ -1,0 +1,67 @@
+{
+  "gregori_bavaro": {
+    "name": "Gregori",
+    "sirName": "Bavaro",
+    "position": "Web Developer",
+    "about": "Hi, my name is Gregori. I am a Creative and skillful frontend web developer with a passion for design and creating elegant solutions. I care deeply about user experience with a serious passion for UI design and new technologies.I love to create beautiful and performant products with delightful user experiences.",
+    "id": 0,
+    "photoWrapperBackgroundColor": "linear-gradient(179deg, #ffb340 0%, #ef6f3e 90%)",
+    "homePageBackgroundColor": "linear-gradient(180deg,#4a4a4a 0%, #050012 80%)",
+    "skillsButtonBackgroundColor": "var(--orange)",
+    "skillsButtonTextColor": "var(--black)",
+    "skillsButtonTextColorOnHover": "var(--lightBeige)",
+    "programmingLanguages": [
+      { "language": "HTML", "experience": "70%" },
+      { "language": "CSS", "experience": "80%" },
+      { "language": "JavaScript", "experience": "60%" },
+      { "language": "React.js", "experience": "55%" },
+      { "language": "TypeScript", "experience": "30%" },
+      { "language": "C#", "experience": "30%" },
+      { "language": "SQL", "experience": "20%" },
+      { "language": "Spline", "experience": "40%" }
+    ]
+  },
+  "darko_dejanoski": {
+    "name": "Darko",
+    "sirName": "Dejanoski",
+    "position": "Software Developer",
+    "about": "The passionate approach in my professional orientation has provided me with opportunities throughout my career that helped in building up my skills and capabilities. So far in my career, I have always been in position that demanded high level of internal and interdepartmental teamwork and high level of cooperation, as strong basis of the execution of the company's goals.",
+    "id": 1,
+    "photoWrapperBackgroundColor": "linear-gradient(180deg,#d95063 0%, #d80025 90%)",
+    "homePageBackgroundColor": "linear-gradient(180deg,#6c052e 0%, #de2c54 80%)",
+    "skillsButtonBackgroundColor": "var(--black)",
+    "skillsButtonTextColor": "var(--lightBeige)",
+    "skillsButtonTextColorOnHover": "var(--cherry)",
+    "programmingLanguages": [
+      { "language": "HTML", "experience": "70%" },
+      { "language": "CSS", "experience": "20%" },
+      { "language": "JavaScript", "experience": "50%" },
+      { "language": "Angular", "experience": "45%" },
+      { "language": "C#", "experience": "60%" },
+      { "language": "SQL", "experience": "50%" },
+      { "language": ".Net", "experience": "70%" }
+    ]
+  },
+  "darko_nikolikj": {
+    "name": "Darko",
+    "sirName": "Nikolikj",
+    "position": ".Net Developer",
+    "about": "I am a highly skilled full-stack web developer with a deep passion for pushing the boundaries of what's possible. I thrive on setting new benchmarks and surpassing previous bests in all my endeavors. My goal is to create elegant, efficient solutions that deliver exceptional value to end-users in the shortest possible time.",
+    "id": 2,
+    "photoWrapperBackgroundColor": "linear-gradient(180deg,#707b7c 0%, #455052 80%)",
+    "homePageBackgroundColor": "linear-gradient(180deg,#444e50 0%, #5f6e70 80%)",
+    "skillsButtonBackgroundColor": "var(--lightBeige)",
+    "skillsButtonTextColor": "var(--black)",
+    "skillsButtonTextColorOnHover": "var(--tile)",
+    "programmingLanguages": [
+      { "language": "HTML", "experience": "40%" },
+      { "language": "CSS", "experience": "50%" },
+      { "language": "JavaScript", "experience": "80%" },
+      { "language": "Angular", "experience": "45%" },
+      { "language": "React.js", "experience": "45%" },
+      { "language": "C#", "experience": "60%" },
+      { "language": "SQL", "experience": "50%" },
+      { "language": ".Net", "experience": "65%" }
+    ]
+  }
+}

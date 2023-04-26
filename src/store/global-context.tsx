@@ -7,8 +7,8 @@ import Person from "../models/person";
 //Photos
 import greg from "../data/photos/gregori.png";
 
-const gregAbout =
-  "Hi, my name is Gregori. I am a Creative and skillful frontend web developer with a passion for design and creating elegant solutions. I care deeply about user experience with a serious passion for UI design and new technologies.I love to create beautiful and performant products with delightful user experiences.";
+//Data
+import data from "../data/personalData/data.json"
 
 export const GlobalContext = React.createContext<Person>({
   name: "",
@@ -32,28 +32,19 @@ const GlobalContextProvider: React.FC<{ children?: React.ReactNode }> = ({
   children,
 }) => {
   const gregori = new Person(
-    "Gregori",
-    "Bavaro",
-    "Web Developer",
-    gregAbout,
-    0,
+    data.gregori_bavaro.name,
+    data.gregori_bavaro.sirName,
+    data.gregori_bavaro.position,
+    data.gregori_bavaro.about,
+    data.gregori_bavaro.id,
     "",
     { from: "-200%", leave: "200%" },
-    "linear-gradient(179deg, #ffb340 0%, #ef6f3e 90%)",
-    "linear-gradient(180deg,#4a4a4a 0%, #050012 80%)",
-    "var(--orange)",
-    "var(--black)",
-    "var(--lightBeige)",
-    [
-      { language: "HTML", experience: "70%" },
-      { language: "CSS", experience: "80%" },
-      { language: "JavaScript", experience: "60%" },
-      { language: "React.js", experience: "55%" },
-      { language: "TypeScript", experience: "30%" },
-      { language: "C#", experience: "30%" },
-      { language: "SQL", experience: "20%" },
-      { language: "Spline", experience: "40%" },
-    ],
+    data.gregori_bavaro.photoWrapperBackgroundColor,
+    data.gregori_bavaro.homePageBackgroundColor,
+    data.gregori_bavaro.skillsButtonBackgroundColor,
+    data.gregori_bavaro.skillsButtonTextColor,
+    data.gregori_bavaro.skillsButtonTextColorOnHover,
+    data.gregori_bavaro.programmingLanguages,
     greg
   );
 

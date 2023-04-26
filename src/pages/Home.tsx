@@ -1,15 +1,13 @@
-//Css
-import classes from "../components/Home.module.css";
-
 //Components
 import HeroText from "../components/HeroText";
+import LayoutWrapper from "../UI/LayoutWrapper";
 
 const Home = () => {
   return (
-    <main className={classes.container}>
+    <LayoutWrapper>
       {/* <HeroThreeDModule /> */}
       <HeroText />
-    </main>
+    </LayoutWrapper>
   );
 };
 
