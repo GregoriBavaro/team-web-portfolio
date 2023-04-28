@@ -1,5 +1,5 @@
 //Hooks
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { GlobalContext } from "../store/global-context";
 import {
   useSpringRef,
@@ -17,6 +17,7 @@ import classes from "./TextContainer.module.css";
 
 const TextContainer: React.FC = () => {
   const transRef = useSpringRef();
+  const ref = useRef<HTMLDivElement>(null);
 
   const personCtx = useContext(GlobalContext);
   const [isClicked, setIsClicked] = useState<boolean>(false);
@@ -33,15 +34,13 @@ const TextContainer: React.FC = () => {
   });
 
   const springsBackground = useSpring({
-    from: { background: "var(--orange)" },
     to: { background: personCtx.buttonBackground },
-    delay: 150,
+    delay: 220,
   });
 
   const springsButtonColor = useSpring({
-    from: { color: "var(--black)" },
     to: { color: personCtx.buttonTextColor },
-    delay: 150,
+    delay: 220,
   });
 
   const transitions = useTransition(personCtx.id, {
@@ -58,6 +57,7 @@ const TextContainer: React.FC = () => {
       friction: 12,
       mass: 1,
     },
+    immediate: !ref.current,
   });
 
   useEffect(() => {

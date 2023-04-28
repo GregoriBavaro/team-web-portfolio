@@ -1,18 +1,22 @@
 //Hooks
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { GlobalContext } from "../store/global-context";
 
 const Controls = (
   length: number,
   rewind: number,
   forwardsAnimation: { from: string; leave: string },
-  backwardsAnimation: { from: string; leave: string }
+  backwardsAnimation: { from: string; leave: string },
+  setIndex: number
 ): {
   animation: { from: string; leave: string };
   index: number;
   forward: () => void;
   backward: () => void;
+  
 } => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const personCtx = useContext(GlobalContext)
+  const [currentIndex, setCurrentIndex] = useState<number>(setIndex);
   const [animation, setAnimation] = useState<{ from: string; leave: string }>({
     from: "-100%",
     leave: "100%",

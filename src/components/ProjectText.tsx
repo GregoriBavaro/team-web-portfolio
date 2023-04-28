@@ -23,6 +23,7 @@ import Project from "../models/project";
 
 const ProjectText: React.FC = () => {
   const transRef = useSpringRef();
+
   const {
     animation: animation,
     index: currentIndex,
@@ -32,7 +33,8 @@ const ProjectText: React.FC = () => {
     2,
     1,
     { from: "100%", leave: "-100%" },
-    { from: "-100%", leave: "100%" }
+    { from: "-100%", leave: "100%" },
+    0
   );
 
   const project = setProject(currentIndex);

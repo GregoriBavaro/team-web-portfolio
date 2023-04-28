@@ -1,5 +1,5 @@
 //Hooks
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useMemo } from "react";
 import { GlobalContext } from "../store/global-context";
 
 //Models

@@ -1,6 +1,6 @@
 .navigation {
-  padding: 0 2rem;
-  height: 10vh;
+  padding: 3vh 2rem 0;
+  height: 9vh;
   display: flex;
 }
 
@@ -10,14 +10,15 @@ nav {
   align-items: center;
   width: 100%;
   z-index: 100;
+  border-radius: 4rem;
+  padding: 0 1.3rem;
+  background-color: rgba(152, 133, 134, 0.206);
+  box-shadow: 0 6px 15px 0 rgb(0 0 0 / 7%);
+  height: 4rem;
 }
 
 nav div:nth-child(1) {
   margin-right: auto;
-}
-
-nav div:nth-child(1) span {
-  /* color: var(--lightBeige); */
 }
 
 ul {
@@ -29,4 +30,15 @@ ul {
 li a {
   text-decoration: none;
   color: var(--lightBeige);
+}
+
+li {
+  padding: 0.3rem 1rem;
+  border-radius: 4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: rgba(152, 133, 134, 0.285);
 }

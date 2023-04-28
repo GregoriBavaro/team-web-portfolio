@@ -37,7 +37,8 @@ const PhotoContainer: React.FC = () => {
     3,
     2,
     { from: "-100%", leave: "100%" },
-    { from: "100%", leave: "-100%" }
+    { from: "100%", leave: "-100%" },
+    personCtx.id
   );
 
   const transitions = useTransition(currentIndex, {
@@ -57,15 +58,12 @@ const PhotoContainer: React.FC = () => {
   });
 
   const springs = useSpring({
-    from: { background: "linear-gradient(179deg, #ffb340 0%, #ef6f3e 90%)" },
     to: { background: personCtx.photoContainerBackground },
-    delay: 700,
+    delay: 300,
   });
   
-
   useEffect(() => {
     transRef.start();
-    document.body.style.background = personCtx.homePageBackground;
   }, [currentIndex]);
 
   SetPerson({
