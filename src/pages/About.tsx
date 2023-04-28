@@ -1,17 +1,14 @@
 //Hooks
-import { useContext, useEffect} from "react";
+import { useContext, useEffect } from "react";
 import { GlobalContext } from "../store/global-context";
-import {
-  useTransition,
-  useSpringRef,
-} from "@react-spring/web";
+import { useTransition, useSpringRef } from "@react-spring/web";
 
 //Components
 import PhotoContainer from "../components/PhotoContainer";
 import NameContainer from "../components/NameContainer";
 import TextContainer from "../components/TextContainer";
 import AboutLayoutWrapper from "../UI/AboutLayoutWrapper";
-import pages from "../UI/LayoutPages"
+import pages from "../UI/LayoutPages";
 
 const About = () => {
   const personCtx = useContext(GlobalContext);
@@ -43,9 +40,18 @@ const About = () => {
         const Page = pages[i];
         return <Page style={style} />;
       })}
-      <PhotoContainer />
-      <NameContainer />
-      <TextContainer />
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "1980px",
+          position: "relative",
+          margin: "0 auto"
+        }}
+      >
+        <PhotoContainer />
+        <NameContainer />
+        <TextContainer />
+      </div>
     </AboutLayoutWrapper>
   );
 };
