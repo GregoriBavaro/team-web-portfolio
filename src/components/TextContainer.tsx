@@ -35,12 +35,12 @@ const TextContainer: React.FC = () => {
 
   const springsBackground = useSpring({
     to: { background: personCtx.buttonBackground },
-    delay: 220,
+    delay: 150,
   });
 
   const springsButtonColor = useSpring({
     to: { color: personCtx.buttonTextColor },
-    delay: 220,
+    delay: 150,
   });
 
   const transitions = useTransition(personCtx.id, {
@@ -57,7 +57,6 @@ const TextContainer: React.FC = () => {
       friction: 12,
       mass: 1,
     },
-    immediate: !ref.current,
   });
 
   useEffect(() => {

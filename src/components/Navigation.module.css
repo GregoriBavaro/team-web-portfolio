@@ -1,5 +1,5 @@
 .navigation {
-  padding: 3vh 2rem 0;
+  padding: 1vh 2rem 0;
   height: 9vh;
   display: flex;
 }
@@ -15,6 +15,7 @@ nav {
   background-color: rgba(152, 133, 134, 0.206);
   box-shadow: 0 6px 15px 0 rgb(0 0 0 / 7%);
   height: 4rem;
+  margin-top: auto;
 }
 
 nav div:nth-child(1) {

@@ -1,10 +1,13 @@
 //Components
 import LayoutWrapper from "../UI/LayoutWrapper";
+import { ContactUs } from "../components/ContactUs";
+import LocationUs from "../components/Location";
 
 const Contact = () => {
   return (
     <LayoutWrapper>
-      <h1>Contact</h1>
+      <ContactUs />
+      <LocationUs />
     </LayoutWrapper>
   );
 };

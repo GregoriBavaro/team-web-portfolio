@@ -3,7 +3,7 @@
   display: flex;
   width: 50%;
   max-width: 50rem;
-  height: 40rem;
+  height: 90%;
   top: 55%;
   left: 2.5%;
   transform: translateY(-50%);
@@ -11,6 +11,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .container div:nth-child(1) {

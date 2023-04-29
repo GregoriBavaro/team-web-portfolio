@@ -22,7 +22,7 @@ const pages: ((
       <animated.div
         style={{
           ...style,
-          background: "linear-gradient(180deg,#6c052e 0%, #de2c54 80%)",
+          background: "linear-gradient(0deg, rgba(66,126,115,1) 51%, rgba(51,103,94,1) 97%)",
           height: "100%",
           width: "100%",
           position: "absolute",

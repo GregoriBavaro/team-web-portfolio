@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@formkit/auto-animate": "^1.0.0-beta.6",
     "@react-spring/parallax": "^9.7.2",
     "@react-spring/web": "^9.7.2",
@@ -16,6 +17,7 @@
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "@use-gesture/react": "^10.2.26",
+    "emailjs": "^4.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
