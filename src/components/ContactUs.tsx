@@ -1,12 +1,67 @@
 //Hooks
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import useInput from "../hooks/use-input";
+
+//Component
+import Form from "../UI/Form";
 
 //CSS
 import classes from "./ContactUs.module.css";
 
 export const ContactUs = () => {
   const form = useRef<any>(null);
+
+  //Name
+  const {
+    value: enteredName,
+    isValid: enteredNameIsValid,
+    hasError: nameInputHasError,
+    valueChangeHandler: nameChangedHandler,
+    inputBlurHandler: nameBlurHandler,
+    reset: resetNameInput,
+  } = useInput((value: any) => value.trim() !== "");
+
+  //Email
+  const {
+    value: enteredEmail,
+    isValid: enteredEmailIsValid,
+    hasError: emailInputHasError,
+    valueChangeHandler: emailChangedHandler,
+    inputBlurHandler: emailBlurHandler,
+    reset: resetEmailInput,
+  } = useInput((value: any) => value.includes("@"));
+
+  //Subject
+  const {
+    value: enteredSubject,
+    isValid: enteredSubjectIsValid,
+    hasError: subjectInputHasError,
+    valueChangeHandler: subjectChangedHandler,
+    inputBlurHandler: subjectBlurHandler,
+    reset: resetSubjectInput,
+  } = useInput((value: any) => value.trim() !== "");
+
+  //Message
+  const {
+    value: enteredMessage,
+    isValid: enteredMessageIsValid,
+    hasError: messageInputHasError,
+    valueChangeHandler: messageChangedHandler,
+    inputBlurHandler: messageBlurHandler,
+    reset: resetMessageInput,
+  } = useInput((value: any) => value.trim() !== "");
+
+  let formIsValid = false;
+
+  if (
+    enteredNameIsValid &&
+    enteredEmailIsValid &&
+    enteredMessageIsValid &&
+    enteredSubjectIsValid
+  ) {
+    formIsValid = true;
+  }
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -26,25 +81,38 @@ export const ContactUs = () => {
           console.log(error.text);
         }
       );
+    resetNameInput();
+    resetEmailInput();
+    resetMessageInput();
+    resetSubjectInput();
   };
 
   return (
     <div className={classes.container}>
-      <form ref={form} onSubmit={sendEmail}>
-        <div>
-          <label>Name</label>
-          <input type="text" name="user_name" />
-        </div>
-        <div>
-          <label>Email</label>
-          <input type="email" name="user_email" />
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea name="message" />
-        </div>
-        <input type="submit" value="Send" />
-      </form>
+      <Form
+        reference={form}
+        value={{ enteredName, enteredSubject, enteredEmail, enteredMessage }}
+        sendEmail={sendEmail}
+        onChange={{
+          nameChangedHandler,
+          emailChangedHandler,
+          subjectChangedHandler,
+          messageChangedHandler,
+        }}
+        onBlur={{
+          nameBlurHandler,
+          emailBlurHandler,
+          subjectBlurHandler,
+          messageBlurHandler,
+        }}
+        hasError={{
+          nameInputHasError,
+          emailInputHasError,
+          subjectInputHasError,
+          messageInputHasError,
+        }}
+        formIsValid={formIsValid}
+      />
     </div>
   );
 };

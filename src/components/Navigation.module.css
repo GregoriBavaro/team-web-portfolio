@@ -12,7 +12,7 @@ nav {
   z-index: 100;
   border-radius: 4rem;
   padding: 0 1.3rem;
-  background-color: rgba(152, 133, 134, 0.206);
+  background-color: rgba(152, 133, 134, 0.871);
   box-shadow: 0 6px 15px 0 rgb(0 0 0 / 7%);
   height: 4rem;
   margin-top: auto;
@@ -30,7 +30,8 @@ ul {
 
 li a {
   text-decoration: none;
-  color: var(--lightBeige);
+  color: rgb(63, 62, 65);
+  font-weight: 600;
 }
 
 li {
@@ -41,5 +42,7 @@ li {
 }
 
 li:hover {
-  background-color: rgba(152, 133, 134, 0.285);
+  background-color: rgb(215, 189, 184);
 }
+
+
