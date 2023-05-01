@@ -49,10 +49,10 @@ const project_2 = new Project(
 const arrayOfProjects = [project_1, project_2];
 
 const SetProject = (index: number): any => {
-  const [project, setProject] = useState<Project>(project_1);
+  const [project, setProject] = useState<Project>(() => project_1);
 
   useEffect(() => {
-    setProject(arrayOfProjects[index]);
+    setProject(() => {return arrayOfProjects[index]});
   }, [index]);
 
   return project;

@@ -16,7 +16,7 @@ const Controls = (
   
 } => {
   const personCtx = useContext(GlobalContext)
-  const [currentIndex, setCurrentIndex] = useState<number>(setIndex);
+  const [currentIndex, setCurrentIndex] = useState<number>(() => {return setIndex});
   const [animation, setAnimation] = useState<{ from: string; leave: string }>({
     from: "-100%",
     leave: "100%",

@@ -1,5 +1,5 @@
 //Hooks
-import { useEffect, useContext} from "react";
+import { useEffect, useContext } from "react";
 import { GlobalContext } from "../store/global-context";
 
 //Models
@@ -11,7 +11,7 @@ import darko from "../data/photos/person.png";
 import darko2 from "../data/photos/person2.png";
 
 //Data
-import data from "../data/personalData/data.json"
+import data from "../data/personalData/data.json";
 
 const SetPerson: React.FC<{
   index: number;
@@ -73,7 +73,9 @@ const SetPerson: React.FC<{
   const arrayOfDevelopers = [greg, darkoD, darkoN];
 
   useEffect(() => {
-    personCtx.set(arrayOfDevelopers[props.index]);
+    personCtx.set(() => {
+      return arrayOfDevelopers[props.index];
+    });
   }, [props.index]);
 };
 

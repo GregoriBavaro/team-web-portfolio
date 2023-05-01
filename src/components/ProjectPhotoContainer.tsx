@@ -17,7 +17,7 @@ const ProjectPhotoContainer: React.FC<{
 }> = (props) => {
   const currentProject = props.project;
   const transRef = useSpringRef();
-  const [info, setInfo] = useState<Project>(currentProject);
+  const [info, setInfo] = useState<Project>(() => {return currentProject});
 
   useEffect(() => {
     const info = setTimeout(() => {

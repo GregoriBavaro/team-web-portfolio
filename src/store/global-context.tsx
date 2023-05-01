@@ -8,7 +8,7 @@ import Person from "../models/person";
 import greg from "../data/photos/gregori.png";
 
 //Data
-import data from "../data/personalData/data.json"
+import data from "../data/personalData/data.json";
 
 export const GlobalContext = React.createContext<Person>({
   name: "",
@@ -24,9 +24,8 @@ export const GlobalContext = React.createContext<Person>({
   buttonTextColor: "",
   buttonTextColorHover: "",
   skills: [{ language: "", experience: "" }],
-  photo: ""
+  photo: "",
 });
-
 
 const GlobalContextProvider: React.FC<{ children?: React.ReactNode }> = ({
   children,
@@ -48,7 +47,9 @@ const GlobalContextProvider: React.FC<{ children?: React.ReactNode }> = ({
     greg
   );
 
-  const [person, setPerson] = useState<Person>(gregori);
+  const [person, setPerson] = useState<Person>(() => {
+    return gregori;
+  });
   
   const contextValue: Person = {
     name: person.name,

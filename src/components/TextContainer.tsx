@@ -20,7 +20,9 @@ const TextContainer: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
 
   const personCtx = useContext(GlobalContext);
-  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [isClicked, setIsClicked] = useState<boolean>(() => {
+    return false;
+  });
   const [info, setInfo] = useState<{
     name: string;
     sirName: string;
@@ -65,12 +67,12 @@ const TextContainer: React.FC = () => {
 
   useEffect(() => {
     const info = setTimeout(() => {
-      setInfo({
+      setInfo(prevState => { return {...prevState, 
         name: personCtx.name,
         sirName: personCtx.sirName,
         title: personCtx.title,
         about: personCtx.about,
-      });
+      }});
     }, 470);
 
     return () => {

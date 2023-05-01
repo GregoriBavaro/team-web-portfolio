@@ -39,7 +39,7 @@ const ProjectText: React.FC = () => {
 
   const project = setProject(currentIndex);
 
-  const [info, setInfo] = useState<Project>(project);
+  const [info, setInfo] = useState<Project>(() => {return project});
 
   useEffect(() => {
     const info = setTimeout(() => {
