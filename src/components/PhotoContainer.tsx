@@ -58,7 +58,7 @@ const PhotoContainer: React.FC = () => {
   });
 
   const springs = useSpring({
-    to: { background: personCtx.photoContainerBackground },
+    to: { background: "linear-gradient(179deg, #ffb340 0%, #ef6f3e 90%)" },
     delay: 300,
   });
   

@@ -18,11 +18,6 @@ export const GlobalContext = React.createContext<Person>({
   id: 0,
   set: "",
   animation: { from: "", leave: "" },
-  photoContainerBackground: "",
-  homePageBackground: "",
-  buttonBackground: "",
-  buttonTextColor: "",
-  buttonTextColorHover: "",
   skills: [{ language: "", experience: "" }],
   photo: "",
 });
@@ -38,11 +33,6 @@ const GlobalContextProvider: React.FC<{ children?: React.ReactNode }> = ({
     data.gregori_bavaro.id,
     "",
     { from: "-200%", leave: "200%" },
-    data.gregori_bavaro.photoWrapperBackgroundColor,
-    data.gregori_bavaro.homePageBackgroundColor,
-    data.gregori_bavaro.skillsButtonBackgroundColor,
-    data.gregori_bavaro.skillsButtonTextColor,
-    data.gregori_bavaro.skillsButtonTextColorOnHover,
     data.gregori_bavaro.programmingLanguages,
     greg
   );
@@ -59,11 +49,6 @@ const GlobalContextProvider: React.FC<{ children?: React.ReactNode }> = ({
     id: person.id,
     set: setPerson,
     animation: person.animation,
-    photoContainerBackground: person.photoContainerBackground,
-    homePageBackground: person.homePageBackground,
-    buttonBackground: person.buttonBackground,
-    buttonTextColor: person.buttonTextColor,
-    buttonTextColorHover: person.buttonTextColorHover,
     skills: person.skills,
     photo: person.photo,
   };

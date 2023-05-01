@@ -35,16 +35,6 @@ const TextContainer: React.FC = () => {
     about: personCtx.about,
   });
 
-  const springsBackground = useSpring({
-    to: { background: personCtx.buttonBackground },
-    delay: 150,
-  });
-
-  const springsButtonColor = useSpring({
-    to: { color: personCtx.buttonTextColor },
-    delay: 150,
-  });
-
   const transitions = useTransition(personCtx.id, {
     ref: transRef,
     keys: null,
@@ -110,11 +100,11 @@ const TextContainer: React.FC = () => {
         <div>
           <p>{info.about}</p>
         </div>
-        <animated.div style={{ ...springsBackground }} onClick={skillsHandler}>
-          <animated.span style={{ ...springsButtonColor }}>
+        <animated.div style={{ background: "var(--orange)" }} onClick={skillsHandler}>
+          <animated.span style={{ color: "var(--black)" }}>
             Skills
           </animated.span>
-          <animated.span style={{ color: personCtx.buttonTextColorHover }}>
+          <animated.span style={{ color: "var(--lightBeige)" }}>
             Skills
           </animated.span>
         </animated.div>{" "}

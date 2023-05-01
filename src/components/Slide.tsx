@@ -18,7 +18,7 @@ const Slide: React.FC<{
     enter: { y: "0%", opacity: 1 },
     leave: { y: props.leave, opacity: 1 },
     config: {
-      duration: 600,
+      duration: 500,
       tension: 180,
       friction: 12,
       mass: 1,

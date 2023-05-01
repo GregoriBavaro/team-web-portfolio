@@ -42,7 +42,7 @@ li {
 }
 
 li:hover {
-  background-color: rgb(215, 189, 184);
+  background-color: var(--orange);
 }
 
 

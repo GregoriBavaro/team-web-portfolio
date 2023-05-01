@@ -27,11 +27,6 @@ const SetPerson: React.FC<{
     data.gregori_bavaro.id,
     "",
     props.animate,
-    data.gregori_bavaro.photoWrapperBackgroundColor,
-    data.gregori_bavaro.homePageBackgroundColor,
-    data.gregori_bavaro.skillsButtonBackgroundColor,
-    data.gregori_bavaro.skillsButtonTextColor,
-    data.gregori_bavaro.skillsButtonTextColorOnHover,
     data.gregori_bavaro.programmingLanguages,
     gregori
   );
@@ -44,11 +39,6 @@ const SetPerson: React.FC<{
     data.darko_dejanoski.id,
     "",
     props.animate,
-    data.darko_dejanoski.photoWrapperBackgroundColor,
-    data.darko_dejanoski.homePageBackgroundColor,
-    data.darko_dejanoski.skillsButtonBackgroundColor,
-    data.darko_dejanoski.skillsButtonTextColor,
-    data.darko_dejanoski.skillsButtonTextColorOnHover,
     data.darko_dejanoski.programmingLanguages,
     darko
   );
@@ -61,11 +51,6 @@ const SetPerson: React.FC<{
     data.darko_nikolikj.id,
     "",
     props.animate,
-    data.darko_nikolikj.photoWrapperBackgroundColor,
-    data.darko_nikolikj.homePageBackgroundColor,
-    data.darko_nikolikj.skillsButtonBackgroundColor,
-    data.darko_nikolikj.skillsButtonTextColor,
-    data.darko_nikolikj.skillsButtonTextColorOnHover,
     data.darko_nikolikj.programmingLanguages,
     darko2
   );

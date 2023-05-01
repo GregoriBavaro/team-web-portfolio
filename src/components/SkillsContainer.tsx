@@ -29,7 +29,7 @@ const SKillsContainer: React.FC<{
         x: "0%",
       },
       config: {
-        duration: 1800,
+        duration: 1200,
       },
     });
   }, [props.isClicked, personCtx.id]);
@@ -56,7 +56,7 @@ const SKillsContainer: React.FC<{
               <span className={classes.experience}>
                 <animated.span
                   style={{
-                    background: personCtx.photoContainerBackground,
+                    background: "linear-gradient(179deg, #ffb340 0%, #ef6f3e 90%)",
                     width: experience,
                     ...springs,
                   }}
