@@ -1,5 +1,6 @@
 //Hooks
 import { Outlet } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 //Components
 import Navigation from "../components/Navigation";
@@ -9,6 +10,8 @@ import Layout from "../UI/Layout";
 import MenuItem from "../models/menu";
 
 const RootLayout: React.FC = () => {
+  const location = useLocation();
+
   const menu = [
     new MenuItem("Home", 1, "/"),
     new MenuItem("About", 2, "/about"),
