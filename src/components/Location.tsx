@@ -8,7 +8,7 @@ const LocationUs = () => {
   return (
     <div className={classes.container}>
       <div>
-        <img src={map} alt="map" />
+        <img src={map} alt="map"/>
       </div>
       <section>
         <span>Binary Brigade</span>

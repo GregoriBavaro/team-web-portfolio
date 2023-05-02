@@ -1,5 +1,120 @@
 .container {
-    flex: 1 1 0px;
-    border: 2px solid red;
-    
+  flex: 1 1 0px;
+  height: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 42rem;
+  left: 50%;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.typewriter {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+.container span {
+  font-size: var(--fs-600);
+}
+
+.typewriter span {
+  font-size: var(--fs-l);
+}
+
+.container p {
+  font-size: var(--fs-400);
+}
+
+.contactButton {
+  text-decoration: none;
+}
+
+.contactButton span {
+  font-size: var(--fs-400);
+  font-weight: normal;
+}
+
+.contactButton {
+  text-align: center;
+  height: 45px;
+  font: normal normal 600 0.82em/2.4em "Oswald", sans-serif;
+  overflow: hidden;
+  max-width: fit-content;
+  border-radius: 2rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  background-color: var(--orange);
+  margin-top: auto;
+  color: var(--black);
+  margin-top: 1.6rem;
+  padding: unset;
+}
+
+.contactButton span {
+  text-align: center;
+  display: block;
+}
+
+.contactButton span {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 0em;
+}
+
+.contactButton:hover {
+  outline: none;
+}
+
+.contactButton:hover span:nth-child(1) {
+  margin-top: -2.3em;
+}
+
+.contactButton span:nth-child(1) {
+  color: var(--black);
+}
+
+.contactButton span:nth-child(2) {
+  color: var(--lightBeige);
+}
+
+.copyright {
+  position: fixed;
+  bottom: 1rem;
+  left: 2rem;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+}
+
+.social {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social img {
+  width: 1.4rem;
+}
+
+.social a {
+  transition: all 0.4s;
+}
+
+.social a:hover {
+  transform: translateY(-0.5rem);
 }

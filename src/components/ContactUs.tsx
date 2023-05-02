@@ -20,6 +20,7 @@ export const ContactUs = () => {
     valueChangeHandler: nameChangedHandler,
     inputBlurHandler: nameBlurHandler,
     reset: resetNameInput,
+    isTouched: nameIsTouched
   } = useInput((value: any) => value.trim() !== "");
 
   //Email
@@ -30,6 +31,7 @@ export const ContactUs = () => {
     valueChangeHandler: emailChangedHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEmailInput,
+    isTouched: emailIsTouched
   } = useInput((value: any) => value.includes("@"));
 
   //Subject
@@ -40,6 +42,7 @@ export const ContactUs = () => {
     valueChangeHandler: subjectChangedHandler,
     inputBlurHandler: subjectBlurHandler,
     reset: resetSubjectInput,
+    isTouched: subjectIsTouched,
   } = useInput((value: any) => value.trim() !== "");
 
   //Message
@@ -50,6 +53,7 @@ export const ContactUs = () => {
     valueChangeHandler: messageChangedHandler,
     inputBlurHandler: messageBlurHandler,
     reset: resetMessageInput,
+    isTouched: messageIsTouched,
   } = useInput((value: any) => value.trim() !== "");
 
   let formIsValid = false;
@@ -89,6 +93,13 @@ export const ContactUs = () => {
 
   return (
     <div className={classes.container}>
+      <div className={classes.header}>
+        <span>Contact us</span>
+        <p>
+          Get your space suit ready and tell us your ideas to develop your dream
+          application.
+        </p>
+      </div>
       <Form
         reference={form}
         value={{ enteredName, enteredSubject, enteredEmail, enteredMessage }}
@@ -112,6 +123,12 @@ export const ContactUs = () => {
           messageInputHasError,
         }}
         formIsValid={formIsValid}
+        isTouched={{
+          nameIsTouched,
+          emailIsTouched,
+          subjectIsTouched,
+          messageIsTouched,
+        }}
       />
     </div>
   );

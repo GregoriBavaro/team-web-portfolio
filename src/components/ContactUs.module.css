@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: left;
 }
 
 form {
@@ -16,10 +17,11 @@ form {
 
 input {
   height: 1rem;
-  width: 91%;
-  border-radius: 0.2rem;
-  padding: 0.8rem 0.4rem;
-  background-color: rgb(215, 189, 184);
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 0.8rem 0.8rem;
+  background-color: rgb(123, 111, 112);
+  border: 1px solid rgba(207, 182, 178, 0.393);
 }
 
 form div {
@@ -33,7 +35,7 @@ form div {
 
 form section {
   display: flex;
-  gap: 0.7rem;
+  gap: 0rem;
 }
 
 .name {
@@ -44,27 +46,26 @@ form section {
   flex: 1 1 0px;
 }
 
-.subject input{
-  width: 95.6%;
+.subject input {
+  width: 90%;
 }
 
 button {
   text-align: center;
   height: 45px;
   font-size: 1.2em;
-  font-weight: 600;
   overflow: hidden;
   max-width: fit-content;
-  border-radius: 0.2rem;
+  border-radius: 2rem;
   border: none;
   transition: all 0.3s ease-in-out;
   padding: 0 1.5rem;
   cursor: pointer;
   background-color: var(--orange);
-  text-transform: uppercase;
   margin-top: 1rem;
   margin-right: auto;
   color: var(--black);
+  z-index: 100;
 }
 
 textarea:focus {
@@ -73,18 +74,18 @@ textarea:focus {
 
 textarea {
   height: 5rem;
-  width: 96%;
-  padding: 0.8rem 0.4rem;
-  border: none;
-  border-radius: 0.2rem;
-  resize: none;
-  background-color: rgb(215, 189, 184);
+  width: 90%;
+  padding: 0.8rem 0.8rem;
+  border: 1px solid rgba(207, 182, 178, 0.393);
+  border-radius: 0.5rem;
+  max-width: 90%;
+  background-color: rgb(123, 111, 112);
 }
 
 button:disabled,
 button:disabled:hover,
 button:disabled:active {
-  background-color: rgba(215, 189, 184, 0.66);
+  background-color: rgba(215, 189, 184, 0.952);
   color: #292929;
   border-color: #ccc;
   cursor: not-allowed;
@@ -95,12 +96,34 @@ button:disabled:active {
 }
 
 .error-text {
-  color: var(--orange);
+  color: rgb(244, 67, 54);
   position: absolute;
-  bottom: -2.7rem;
+  bottom: -2.2rem;
   margin-left: 0.2rem;
+  font-size: 0.8rem;
 }
 
-.container h1 {
-  margin-right: auto;
+.error-icon {
+  position: absolute;
+  width: 1.5rem;
+  left: 81%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-input {
+  border: 1px solid rgb(244, 67, 54);
+}
+
+.header {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.7rem;
+}
+
+.header span {
+  font-size: var(--fs-600);
+  color: var(--orange);
+  font-weight: 500;
 }

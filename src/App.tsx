@@ -2,7 +2,7 @@
 import {
   Navigate,
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom";
 import GlobalContextProvider from "./store/global-context";
 
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <GlobalContextProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}/>
     </GlobalContextProvider>
   );
 }

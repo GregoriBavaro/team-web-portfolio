@@ -1,7 +1,6 @@
 .container {
-    height: 90vh;
-    height: 90svh;
-    position: relative;
-    display: flex;
-  }
-  
+  height: 90vh;
+  height: 90svh;
+  position: relative;
+  display: flex;
+}

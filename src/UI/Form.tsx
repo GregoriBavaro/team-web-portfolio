@@ -1,5 +1,12 @@
+//Hooks
+import { useState } from "react";
+
 //CSS
 import classes from "../components/ContactUs.module.css";
+
+//Icons
+import invalid from "../data/ui/invalid.png";
+import correct from "../data/ui/correct.png";
 
 const Form: React.FC<{
   reference: any;
@@ -29,6 +36,12 @@ const Form: React.FC<{
     messageInputHasError: boolean;
   };
   formIsValid: boolean;
+  isTouched: {
+    nameIsTouched: boolean;
+    emailIsTouched: boolean;
+    subjectIsTouched: boolean;
+    messageIsTouched: boolean;
+  };
 }> = ({
   reference,
   sendEmail,
@@ -52,10 +65,16 @@ const Form: React.FC<{
     messageInputHasError,
   },
   formIsValid,
+  isTouched: {
+    nameIsTouched,
+    emailIsTouched,
+    subjectIsTouched,
+    messageIsTouched,
+  },
 }) => {
+
   return (
     <form ref={reference} onSubmit={sendEmail}>
-      <h1>Contact us</h1>
       <section>
         <div className={classes["name"]}>
           <input
@@ -65,9 +84,20 @@ const Form: React.FC<{
             onChange={nameChangedHandler}
             onBlur={nameBlurHandler}
             placeholder="Name"
+            style={{ border: nameInputHasError ? "1px solid red" : "" }}
           />
           {nameInputHasError && (
-            <p className={classes["error-text"]}>Name must not be empty</p>
+            <>
+              <p className={classes["error-text"]}>Name is empty</p>
+              <img
+                src={invalid}
+                alt="invalid"
+                className={classes["error-icon"]}
+              />
+            </>
+          )}
+          {!nameInputHasError && nameIsTouched && (
+            <img src={correct} alt="valid" className={classes["error-icon"]} />
           )}
         </div>
         <div className={classes["email"]}>
@@ -78,11 +108,20 @@ const Form: React.FC<{
             onChange={emailChangedHandler}
             onBlur={emailBlurHandler}
             placeholder="Email"
+            style={{ border: emailInputHasError ? "1px solid red" : "" }}
           />
           {emailInputHasError && (
-            <p className={classes["error-text"]}>
-              Please enter a valid email address
-            </p>
+            <>
+              <p className={classes["error-text"]}>Email is empty or invalid</p>
+              <img
+                src={invalid}
+                alt="invalid"
+                className={classes["error-icon"]}
+              />
+            </>
+          )}
+          {!emailInputHasError && emailIsTouched && (
+            <img src={correct} alt="valid" className={classes["error-icon"]} />
           )}
         </div>
       </section>
@@ -94,9 +133,20 @@ const Form: React.FC<{
           onChange={subjectChangedHandler}
           onBlur={subjectBlurHandler}
           placeholder="Subject"
+          style={{ border: subjectInputHasError ? "1px solid red" : "" }}
         />
         {subjectInputHasError && (
-          <p className={classes["error-text"]}>Subject must not be empty</p>
+          <>
+            <p className={classes["error-text"]}>Subject is empty</p>
+            <img
+              src={invalid}
+              alt="invalid"
+              className={classes["error-icon"]}
+            />
+          </>
+        )}
+        {!subjectInputHasError && subjectIsTouched && (
+          <img src={correct} alt="valid" className={classes["error-icon"]} />
         )}
       </div>
       <div className={classes["message"]}>
@@ -106,9 +156,20 @@ const Form: React.FC<{
           onChange={messageChangedHandler}
           onBlur={messageBlurHandler}
           placeholder="Message"
+          style={{ border: messageInputHasError ? "1px solid red" : "" }}
         />
         {messageInputHasError && (
-          <p className={classes["error-text"]}>Please enter a message</p>
+          <>
+            <p className={classes["error-text"]}>Message is empty</p>
+            <img
+              src={invalid}
+              alt="invalid"
+              className={classes["error-icon"]}
+            />
+          </>
+        )}
+        {!messageInputHasError && messageIsTouched && (
+          <img src={correct} alt="valid" className={classes["error-icon"]} />
         )}
       </div>
       <button type="submit" value="Send" disabled={!formIsValid}>

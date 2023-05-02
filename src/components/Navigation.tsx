@@ -12,7 +12,7 @@ const Navigation: React.FC<{ items: Menu[] }> = (props) => {
     <header className={classes.navigation}>
       <nav>
         <div>
-          <span>GD2</span>
+          <span>Binary</span>
         </div>
         <ul>
           {props.items.map(({ id, name, to }) => (

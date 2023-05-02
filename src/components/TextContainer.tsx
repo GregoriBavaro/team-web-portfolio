@@ -100,14 +100,14 @@ const TextContainer: React.FC = () => {
         <div>
           <p>{info.about}</p>
         </div>
-        <animated.div style={{ background: "var(--orange)" }} onClick={skillsHandler}>
-          <animated.span style={{ color: "var(--black)" }}>
+        <div style={{ background: "var(--orange)" }} onClick={skillsHandler}>
+          <span style={{ color: "var(--black)" }}>
             Skills
-          </animated.span>
-          <animated.span style={{ color: "var(--lightBeige)" }}>
+          </span>
+          <span style={{ color: "var(--lightBeige)" }}>
             Skills
-          </animated.span>
-        </animated.div>{" "}
+          </span>
+        </div>
       </Slide>
       <SKillsContainer isClicked={isClicked} skillsHandler={skillsHandler} />
     </div>
