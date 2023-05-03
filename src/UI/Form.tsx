@@ -92,12 +92,12 @@ const Form: React.FC<{
               <img
                 src={invalid}
                 alt="invalid"
-                className={classes["error-icon"]}
+                className={classes["error-icon-name-email"]}
               />
             </>
           )}
           {!nameInputHasError && nameIsTouched && (
-            <img src={correct} alt="valid" className={classes["error-icon"]} />
+            <img src={correct} alt="valid" className={classes["error-icon-name-email"]} />
           )}
         </div>
         <div className={classes["email"]}>
@@ -116,12 +116,12 @@ const Form: React.FC<{
               <img
                 src={invalid}
                 alt="invalid"
-                className={classes["error-icon"]}
+                className={classes["error-icon-name-email"]}
               />
             </>
           )}
           {!emailInputHasError && emailIsTouched && (
-            <img src={correct} alt="valid" className={classes["error-icon"]} />
+            <img src={correct} alt="valid" className={classes["error-icon-name-email"]} />
           )}
         </div>
       </section>
@@ -164,16 +164,17 @@ const Form: React.FC<{
             <img
               src={invalid}
               alt="invalid"
-              className={classes["error-icon"]}
+              className={classes["error-icon-message"]}
             />
           </>
         )}
         {!messageInputHasError && messageIsTouched && (
-          <img src={correct} alt="valid" className={classes["error-icon"]} />
+          <img src={correct} alt="valid" className={classes["error-icon-message"]} />
         )}
       </div>
       <button type="submit" value="Send" disabled={!formIsValid}>
-        Send
+        <span>Send</span>
+        <span>Send</span>
       </button>
     </form>
   );

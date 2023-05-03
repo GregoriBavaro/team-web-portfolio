@@ -21,7 +21,7 @@ const HeroText: React.FC = () => {
             options={{
               strings: [
                 "Developers.",
-                "Strategists.",
+                "Enthusiasts.",
                 "Designers.",
                 "Binary Brigade.",
               ],
