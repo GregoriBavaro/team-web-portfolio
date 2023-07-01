@@ -12,13 +12,12 @@
 }
 
 .container div:nth-child(1) {
-  height: 35rem;
+  height: 30rem;
   width: 80%;
   overflow: hidden;
   border-radius: 14rem;
   display: flex;
 }
-
 
 img {
   max-width: 100%;

@@ -4,7 +4,7 @@ import { animated, AnimatedProps } from "@react-spring/web";
 //Photos
 import greg from "../data/photos/gregori.png";
 import person from "../data/photos/person.png";
-import person2 from "../data/photos/person2.png";
+import person2 from "../data/photos/nikolikj.png";
 
 const pages: ((
   props: AnimatedProps<{ style: CSSProperties }>
